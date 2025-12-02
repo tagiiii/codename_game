@@ -1,4 +1,5 @@
 # Codenames Online for Teams
+![Deploy status](https://github.com/tagiiii/codename_game/actions/workflows/deploy.yml/badge.svg)
 
 子ども向けオンライン支援や国語プログラムで使用する、連想型コミュニケーションゲームです。
 
