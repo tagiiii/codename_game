@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
   // GitHub Pages にデプロイする場合は、リポジトリ名を base に設定してください
-  base: mode === 'production' ? './' : '/',
+  base: mode === 'production' ? '/codename_game/' : '/',
 }))
