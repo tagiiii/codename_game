@@ -1,0 +1,94 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+    pointer-events: none;
+    /* クリックを透過させる場合 */
+}
+
+.content {
+    background: white;
+    padding: 2rem 4rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 4px solid transparent;
+    max-width: 90%;
+}
+
+.message {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--color-text);
+    white-space: pre-line;
+}
+
+/* Types */
+.info .content {
+    border-color: var(--color-secondary);
+    background-color: #f0f7ff;
+}
+
+.info .message {
+    color: var(--color-secondary);
+}
+
+.success .content {
+    border-color: var(--color-accent);
+    background-color: #fffde7;
+}
+
+.success .message {
+    color: #f57f17;
+    /* Darker Yellow/Orange */
+}
+
+.danger .content {
+    border-color: var(--color-primary);
+    background-color: #fff5f5;
+}
+
+.danger .message {
+    color: var(--color-primary);
+}
+
+.warning .content {
+    border-color: #ff9800;
+    background-color: #fff3e0;
+}
+
+.warning .message {
+    color: #e65100;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

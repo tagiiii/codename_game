@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ルームコレクション
+    match /rooms/{roomId} {
+      // 読み取り：誰でも可能
+      allow read: if true;
+
+      // 作成：誰でも可能（新規ルーム作成のため）
+      allow create: if true;
+
+      // 更新：期限内のみ可能
+      allow update: if request.time < resource.data.expiresAt;
+
+      // 削除：禁止（TTLで自動削除）
+      allow delete: if false;
+    }
+  }
+}

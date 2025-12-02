@@ -1,0 +1,41 @@
+.card {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.card.clickable {
+  cursor: pointer;
+}
+
+.card.clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card.revealed {
+  cursor: not-allowed;
+}
+
+.word {
+  z-index: 1;
+}
+
+.assassinIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.5rem;
+}
